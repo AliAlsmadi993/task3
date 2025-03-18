@@ -1,0 +1,12 @@
+<form #login="ngForm" (ngSubmit)="getData(login.value)">
+
+  <div class="form-group col-12">
+    <input type="email" class="form-control" id="exampleCheck1" placeholder="email" name="Email" ngModel>
+  </div>
+
+  <div class="form-group col-12">
+    <input type="password" class="form-control" id="exampleCheck1" placeholder="password" name="password" ngModel>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
