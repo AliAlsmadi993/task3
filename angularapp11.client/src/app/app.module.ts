@@ -14,6 +14,9 @@ import { ProductComponent } from './admin/product/product.component';
 import { ShowcatigoryComponent } from './admin/showcatigory/showcatigory.component';
 import { ShowproductComponent } from './admin/showproduct/showproduct.component';
 import { DashbordeComponent } from './admin/dashborde/dashborde.component';
+import { EditProductComponent } from './admin/editproduct/editproduct.component';
+import { TestComponent } from './test/test.component';
+import { EditCategoryComponent } from './admin/edit-category/edit-category.component';
 
 
 @NgModule({
@@ -26,7 +29,10 @@ import { DashbordeComponent } from './admin/dashborde/dashborde.component';
     ProductComponent,
     ShowcatigoryComponent,
     ShowproductComponent,
-    DashbordeComponent
+    DashbordeComponent,
+    EditProductComponent,
+    TestComponent,
+    EditCategoryComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

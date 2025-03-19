@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -31,6 +32,22 @@ export class ServiceService {
   }
   getProducts(): Observable<any> {
     return this._url.get("https://67cd64b6dd7651e464ee3d63.mockapi.io/products");
+  }
+
+  updateProduct(id: number, data: any): Observable<any> {
+    return this._url.put(`https://67cd64b6dd7651e464ee3d63.mockapi.io/products/${id}`, data);
+  }
+
+  getProductById(id: number): Observable<any> {
+    return this._url.get(`https://67cd64b6dd7651e464ee3d63.mockapi.io/products/${id}`);
+  }
+
+  getCategoryById(id: number): Observable<any> {
+    return this._url.get(`https://67cd64b6dd7651e464ee3d63.mockapi.io/categories/${id}`);
+  }
+
+  updateCategory(id: number, data: any): Observable<any> {
+    return this._url.put(`https://67cd64b6dd7651e464ee3d63.mockapi.io/categories/${id}`, data);
   }
 
 }

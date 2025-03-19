@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ServiceService } from '../../service/service.service';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-showproduct',
@@ -9,7 +10,7 @@ import { ServiceService } from '../../service/service.service';
 export class ShowproductComponent {
   products: any = [];
 
-  constructor(private _myser: ServiceService) { }
+  constructor(private _myser: ServiceService, private router: Router) { }
 
   ngOnInit() {
     this.getData();
@@ -21,5 +22,7 @@ export class ShowproductComponent {
       this.products = data;
     });
   }
+  editProduct(productId: number) {
+    this.router.navigate(['/dashborde/editProduct', productId]);  }
 
 }
