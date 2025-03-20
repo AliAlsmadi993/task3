@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent {
-  product = {  // هذا المنتج هو ما سيتم عرضه وتقييمه
+  product = {
     name: 'Angular Course',
     description: 'A complete guide to mastering Angular framework.',
     price: 99.99
