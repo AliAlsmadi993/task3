@@ -12,13 +12,18 @@ import { EditProductComponent } from './admin/editproduct/editproduct.component'
 import { EditCategoryComponent } from './admin/edit-category/edit-category.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { ParsedEvent } from '@angular/compiler';
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
   { path: "test", component: TestComponent },
   { path: "profile", component: ProfileComponent },
-  { path: "edit-profile", component:EditProfileComponent },
+  { path: "edit-profile", component: EditProfileComponent },
+  { path: "parent", component: ParentComponent },
+  { path: "child", component:ChildComponent },
   
   { path: "dashborde", component: DashbordeComponent, children: [
 

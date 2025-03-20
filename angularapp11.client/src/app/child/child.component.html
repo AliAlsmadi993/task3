@@ -1,0 +1,11 @@
+<div class="mt-4 text-center">
+  <h3>Rate this Product</h3>
+  <div>
+    <span *ngFor="let star of [1, 2, 3, 4, 5]"
+          (click)="setRating(star)"
+          [ngClass]="{'text-warning': star <= selectedRating, 'text-secondary': star > selectedRating}"
+          style="font-size: 2rem; cursor: pointer;">
+      ★
+    </span>
+  </div>
+</div>
