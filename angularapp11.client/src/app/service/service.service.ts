@@ -5,8 +5,12 @@ import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
+  
 })
+
+
 export class ServiceService {
+  private apiUrl = 'https://67cea6ee125cd5af757b6514.mockapi.io/Users';
 
   constructor(private _url: HttpClient) { }
 
@@ -49,5 +53,7 @@ export class ServiceService {
   updateCategory(id: number, data: any): Observable<any> {
     return this._url.put(`https://67cd64b6dd7651e464ee3d63.mockapi.io/categories/${id}`, data);
   }
-
+  updateUser(user: any): Observable<any> {
+    return this._url.put(`${this.apiUrl}/${user.id}`, user);
+  }
 }

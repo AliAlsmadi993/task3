@@ -10,11 +10,15 @@ import { DashbordeComponent } from './admin/dashborde/dashborde.component';
 import { TestComponent } from './test/test.component';
 import { EditProductComponent } from './admin/editproduct/editproduct.component';
 import { EditCategoryComponent } from './admin/edit-category/edit-category.component';
+import { ProfileComponent } from './profile/profile.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
   { path: "test", component: TestComponent },
+  { path: "profile", component: ProfileComponent },
+  { path: "edit-profile", component:EditProfileComponent },
   
   { path: "dashborde", component: DashbordeComponent, children: [
 
